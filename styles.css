@@ -1,0 +1,99 @@
+/* Akash Sanai – Resume Website
+   Palette: midnight navy, teal and warm off-white.
+   Layout: Flexbox for navigation and hero; CSS Grid for content cards.
+*/
+:root {
+  --navy: #102a43;
+  --navy-deep: #0b1f33;
+  --teal: #17a398;
+  --teal-light: #dff5f1;
+  --ink: #243b53;
+  --muted: #627d98;
+  --paper: #f7fafc;
+  --white: #ffffff;
+  --line: #d9e2ec;
+  --shadow: 0 16px 40px rgba(16, 42, 67, .08);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--white); color: var(--ink); font-family: "DM Sans", sans-serif; line-height: 1.7; }
+h1, h2, h3, .brand { font-family: "Manrope", sans-serif; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+.site-header { position: sticky; top: 0; z-index: 10; background: rgba(11, 31, 51, .97); box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+.navbar { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.brand { color: var(--white); font-size: 1.55rem; font-weight: 800; letter-spacing: -2px; }
+.brand span, .hero h1 span, .section-title span { color: var(--teal); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { color: #d9e2ec; font-size: .9rem; font-weight: 600; transition: color .2s ease; }
+.nav-links a:hover { color: #69d5ca; }
+.nav-links .nav-contact { padding: 10px 17px; border: 1px solid rgba(255,255,255,.35); border-radius: 6px; }
+.hero { display: grid; grid-template-columns: 1.5fr .8fr; align-items: center; gap: 70px; padding-block: 94px 100px; }
+.eyebrow { color: var(--teal); font-size: .75rem; font-weight: 800; letter-spacing: .16em; margin: 0 0 14px; }
+.hero h1 { color: var(--navy-deep); font-size: clamp(3.2rem, 7vw, 5.5rem); line-height: 1.04; letter-spacing: -.07em; margin: 0 0 18px; }
+.hero h2 { color: var(--muted); font-size: 1.1rem; font-weight: 600; margin: 0 0 20px; }
+.hero-intro { max-width: 650px; color: var(--muted); font-size: 1.05rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.button { display: inline-block; padding: 12px 19px; border-radius: 6px; font-weight: 700; font-size: .9rem; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button-primary { background: var(--teal); color: var(--white); }
+.button-primary:hover { background: #12877e; }
+.button-outline { border: 1px solid var(--line); color: var(--navy); }
+.hero-card { background: var(--navy); color: var(--white); border-radius: 14px; padding: 30px; box-shadow: var(--shadow); }
+.monogram { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: var(--teal); font: 800 1.5rem "Manrope", sans-serif; margin-bottom: 26px; }
+.card-label { color: #8fb3c9; font-size: .68rem; letter-spacing: .14em; font-weight: 800; margin: 0 0 4px; }
+.card-value { font-weight: 600; margin: 0; }
+.card-rule { height: 1px; background: rgba(255,255,255,.14); margin: 18px 0; }
+.section { padding-block: 84px; }
+.section-light { background: var(--paper); }
+.section-title { color: var(--navy-deep); font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.055em; line-height: 1.2; margin: 0 0 34px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.about-grid p { color: var(--muted); margin: 0; }
+.about-grid .lead { color: var(--navy); font: 600 1.35rem/1.55 "Manrope", sans-serif; }
+.timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.experience-card, .education-card, .skill-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 25px; box-shadow: 0 8px 24px rgba(16,42,67,.035); }
+.experience-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
+.experience-card h3, .education-card h3, .skill-card h3 { color: var(--navy); font-size: 1.05rem; line-height: 1.35; margin: 0 0 5px; }
+.company { color: var(--teal); font-weight: 700; margin: 0 0 13px; }
+.date { color: var(--muted); font-size: .76rem; white-space: nowrap; font-weight: 600; }
+.experience-card ul { color: var(--muted); padding-left: 18px; margin: 14px 0 0; font-size: .9rem; }
+.experience-card li { padding: 3px 0; }
+.education-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.education-card p:last-child { color: var(--muted); margin-bottom: 0; }
+.education-card.featured { border-top: 4px solid var(--teal); }
+.education-tag { display: inline-block; color: #087d74; background: var(--teal-light); border-radius: 30px; padding: 3px 10px; font-size: .65rem; font-weight: 800; letter-spacing: .1em; margin-bottom: 13px; }
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.skill-card p { color: var(--muted); margin: 8px 0 0; }
+.language-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 28px; color: var(--muted); }
+.language-row strong { color: var(--navy); margin-right: 8px; }
+.language-row span { background: var(--teal-light); color: #087d74; padding: 6px 13px; border-radius: 30px; font-size: .82rem; font-weight: 700; }
+.contact-section { background: var(--navy-deep); color: var(--white); }
+.contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+.contact-section .section-title { color: var(--white); margin-bottom: 12px; }
+.contact-copy { color: #a9bfd0; margin: 0; }
+.contact-details { display: grid; gap: 10px; color: #d9e2ec; }
+.contact-details a { color: #69d5ca; font-weight: 700; }
+.contact-details p { margin: 0; }
+.site-footer { background: #071827; color: #9fb3c8; padding: 18px 0; font-size: .82rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+.footer-inner a { color: #69d5ca; }
+
+/* Responsive layout: navigation and content adapt to tablet and mobile widths. */
+@media (max-width: 760px) {
+  .container { width: min(100% - 32px, 600px); }
+  .navbar { align-items: flex-start; flex-direction: column; padding-block: 14px; gap: 10px; }
+  .nav-links { width: 100%; flex-wrap: wrap; gap: 12px 18px; }
+  .nav-links a { font-size: .82rem; }
+  .hero { grid-template-columns: 1fr; gap: 35px; padding-block: 65px; }
+  .hero-card { max-width: 480px; }
+  .section { padding-block: 62px; }
+  .about-grid, .timeline, .education-grid, .skills-grid { grid-template-columns: 1fr; gap: 15px; }
+  .about-grid { gap: 18px; }
+  .contact-inner { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 430px) {
+  .experience-top { flex-direction: column; gap: 4px; }
+  .hero h1 { font-size: 3.25rem; }
+  .button { width: 100%; text-align: center; }
+  .footer-inner { flex-direction: column; }
+}
