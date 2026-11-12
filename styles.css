@@ -76,6 +76,9 @@ a { color: inherit; text-decoration: none; }
 .contact-copy { color: #a9bfd0; margin: 0; }
 .contact-details { display: grid; gap: 10px; color: #d9e2ec; }
 .contact-details a { color: #69d5ca; font-weight: 700; }
+.contact-details .linkedin-link { display: inline-flex; align-items: center; gap: 9px; width: fit-content; color: #69d5ca; }
+.linkedin-icon { width: 20px; height: 20px; flex: 0 0 20px; }
+.contact-details .linkedin-link:hover { color: #ffffff; }
 .contact-details p { margin: 0; }
 .site-footer { background: #071827; color: #9fb3c8; padding: 18px 0; font-size: .82rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
