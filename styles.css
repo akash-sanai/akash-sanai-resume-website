@@ -40,7 +40,7 @@ a { color: inherit; text-decoration: none; }
 .button-primary:hover { background: #12877e; }
 .button-outline { border: 1px solid var(--line); color: var(--navy); }
 .hero-card { background: var(--navy); color: var(--white); border-radius: 14px; padding: 30px; box-shadow: var(--shadow); }
-.monogram { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: var(--teal); font: 800 1.5rem "Manrope", sans-serif; margin-bottom: 26px; }
+.profile-photo { display: block; width: 148px; height: 172px; object-fit: cover; object-position: center 28%; border: 4px solid rgba(255,255,255,.22); border-radius: 12px; margin-bottom: 26px; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
 .card-label { color: #8fb3c9; font-size: .68rem; letter-spacing: .14em; font-weight: 800; margin: 0 0 4px; }
 .card-value { font-weight: 600; margin: 0; }
 .card-rule { height: 1px; background: rgba(255,255,255,.14); margin: 18px 0; }
