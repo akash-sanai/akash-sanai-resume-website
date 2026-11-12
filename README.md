@@ -22,5 +22,3 @@ Open `index.html` in a browser, or use the Live Server extension in Visual Studi
 - CSS Grid: hero, experience, education and skills layouts
 - Positioning: sticky navigation header
 - Responsive design: media queries for tablet and mobile widths
-
-Before submission, verify contact details and add the actual GitHub repository and live website URLs to the assignment PDF.
